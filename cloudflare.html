@@ -1,10 +1,9 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Error! | Yunus Şükrü Gülten</title>
+    <title>Yunus Şükrü Gülten | Error!</title>
     <style>
       html, body {
         height: 100%;
@@ -56,37 +55,11 @@
     </style>
   </head>
   <body>
-    <script>
-        var seconds = 5; // seconds for HTML
-        var foo; // variable for clearInterval() function
-        
-        function redirect() {
-            document.location.href = 'https://www.yunussukrugulten.com/';
-        }
-        
-        function updateSecs() {
-            document.getElementById("seconds").innerHTML = seconds;
-            seconds--;
-            if (seconds == -1) {
-                clearInterval(foo);
-                redirect();
-            }
-        }
-        
-        function countdownTimer() {
-            foo = setInterval(function () {
-                updateSecs()
-            }, 1000);
-        }
-        
-        countdownTimer();
-        </script>
     <main>
-      <img src="https://www.yunussukrugulten.com/mstile-150x150.png" alt="Photo" width="125" height="125">
+      <img src="https://yunussukrugulten.github.io/logo.png" alt="Photo" width="374" height="83">
       <h1>There is something wrong :(</h1>
       <p>We are trying to resolve it as soon as possible.</p>
-      <p>You should be automatically redirected in <span style="font-weight:bold" id="seconds">5</span> seconds.</p>
-      <p><strong><a href="https://www.yunussukrugulten.com/">BACK</a></strong></p>
+      <p><strong><a href="https://www.yunussukrugulten.com/">Back to yunussukrugulten.com</a></strong></p>
     </main>
   </body>
 </html>
