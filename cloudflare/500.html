@@ -1,65 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yunus Şükrü Gülten | Error!</title>
-    <style>
-      html, body {
-        height: 100%;
-      }
-      body {
-        background-color: #fff;
-        background: radial-gradient(circle at center, #fff 0%, #f8f8f8 75%, #ebebeb 100%);
-        color: #222;
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-        font-size: 1rem;
-        line-height: 1.5;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      main {
-        padding: 1rem;
-        text-align: center;
-      }
-      h1 {
-        font-size: 2.5rem;
-        line-height: 1.1;
-        margin: 0;
-      }
-      @media screen and (max-width: 480px) {
-        h1 {
-          font-size: 1.5rem;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yunus Şükrü Gülten | Error!</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <script>
+        var seconds = 5; // seconds for HTML
+        var foo; // variable for clearInterval() function
+        
+        function redirect() {
+            document.location.href = 'https://www.yunussukrugulten.com/';
         }
-      }
-      h1::after {
-        content: "";
-        background-color: #ffe800;
-        background: repeating-linear-gradient(45deg, #ffe800, #ffe800 0.5rem, #222 0.5rem, #222 1.0rem);
-        display: block;
-        height: 0.5rem;
-        margin-top: 1rem;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      p {
-        margin: 1rem 0 0 0;
-      }
-      a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <img src="https://yunussukrugulten.github.io/cloudflare/images/logo.png" alt="Logo" width="250" height="80">
-      <h1>There is something wrong&nbsp;&#129300;</h1>
-      <p>&#128295;&nbsp;We are trying to resolve it as soon as possible&nbsp;&#8987;</p>
-      <p>::CLOUDFLARE_ERROR_500S_BOX::</p>
+        
+        function updateSecs() {
+            document.getElementById("seconds").innerHTML = seconds;
+            seconds--;
+            if (seconds == -1) {
+                clearInterval(foo);
+                redirect();
+            }
+        }
+        
+        function countdownTimer() {
+            foo = setInterval(function () {
+                updateSecs()
+            }, 1000);
+        }
+        
+        countdownTimer();
+        </script>
+  <main>
+    <h1>Hello!<span class="wave">👋</span></h1>
+    <h3>There is something wrong&nbsp;&#129300;</h3>
+    <h3>&#128295;&nbsp;We are trying to resolve it as soon as possible&nbsp;&#8987;</h3>
+    <h3>&#9940;&nbsp;You should be automatically redirected in <span id="seconds">5</span> seconds&nbsp;&#128075;</h3>
+    <h3>&#128073;&nbsp;<a href="https://www.yunussukrugulten.com/">yunussukrugulten.com</a>&nbsp;&#128072;</h3>
+    <p>🚧</p>
+    <p>::CLOUDFLARE_ERROR_500S_BOX::</p>
     </main>
-  </body>
+</body>
 </html>
