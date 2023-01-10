@@ -27,6 +27,7 @@ body {
   }
   
   a {
+    text-decoration: none;
     color: rgb(122, 191, 255);
   }
 
