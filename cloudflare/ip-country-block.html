@@ -8,39 +8,18 @@
 </head>
 <body>
     <script>
-        var seconds = 10; // seconds for HTML
-        var foo; // variable for clearInterval() function
-        
-        function redirect() {
-            document.location.href = 'https://www.yunussukrugulten.com/';
-        }
-        
-        function updateSecs() {
-            document.getElementById("seconds").innerHTML = seconds;
-            seconds--;
-            if (seconds == -1) {
-                clearInterval(foo);
-                redirect();
-            }
-        }
-        
-        function countdownTimer() {
-            foo = setInterval(function () {
-                updateSecs()
-            }, 1000);
-        }
-        
-        countdownTimer();
-        </script>
+        setTimeout(function() {
+            window.close()
+        }, 5000);
+      </script>
   <main>
     <h1>Hello!<span class="wave">👋</span></h1>
     <h3>There is something wrong&nbsp;&#129300;</h3>
-    <h3>&#128295;&nbsp;We are trying to resolve it as soon as possible&nbsp;&#8987;</h3>
-    <h3>&#9940;&nbsp;You should be automatically redirected in <span id="seconds">10</span> seconds&nbsp;&#128075;</h3>
-    <h3>&#128073;&nbsp;<a href="https://www.yunussukrugulten.com/">yunussukrugulten.com</a>&nbsp;&#128072;</h3>
+    <h3>&#9940;&nbsp;IP/Country Block!&nbsp;&#9940;</h3>
     <p>🚧</p>
-    <p>::CLIENT_IP::</p>
-    <p>::RAY_ID::</p>
+    <p>Your IP address: ::CLIENT_IP::</p>
+    <p>Ray ID: ::RAY_ID::</p>
+    <p>Geo: ::GEO::</p>
     </main>
 </body>
 </html>
